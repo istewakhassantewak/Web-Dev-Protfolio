@@ -34,14 +34,16 @@
 }
 
 .sectiontitle {
-    font-size: 35px;
-    font-weight: bold;
     color: #181818;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
 }
 
 .sectiondesc {
-    font-size: 18px;
     color: #757575;
+    text-align: center;
+    font-size: 18px;
 }
 
 .textcenter {
@@ -67,22 +69,23 @@ nav {
 .nav-title {
     font-weight: 800;
     font-size: 45px;
+    color: #181818;
 }
 
 
 
-nav ul {
+nav>ul {
     display: flex;
     align-items: center;
 
 }
 
-nav ul li {
+nav li {
     list-style: none;
     margin-right: 50px;
 }
 
-nav ul li a {
+nav a {
     text-decoration: none;
     font-size: 20px;
 
@@ -153,4 +156,62 @@ main section {
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+}
+
+/* resume section styles */
+.resumecontainer {
+    display: flex;
+    gap: 24px;
+}
+
+
+
+.experiencesubtitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+}
+
+.experiencedescription,
+.experiencesubtitle {
+    color: #757575;
+}
+
+.resume hr {
+    margin: 30px 5px;
+}
+
+.resumedownloadcv {
+    margin-top: 50px;
+}
+
+/* footer style  */
+footer {
+    display: flex;
+    gap: 100px;
+    background-color: #fff8f3;
+    margin-top: 100px;
+    padding: 130px 200px;
+}
+
+.footercolumn {
+    width: 50%;
+}
+
+.sociallinks a {
+    margin-right: 25px;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+textarea {
+    display: block;
+    margin-bottom: 25px;
+    padding: 18px 35px;
+    color: #757575;
+    border-radius: 5px;
+    background: #fff;
+    border: 0;
+    width: 100%;
 }

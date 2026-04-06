@@ -27,7 +27,12 @@
 
 
 
-
+/* header  */
+.header {
+    background-image: url('../images/developer.png'), url('../images/header_bg.png');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+}
 
 
 /* nav style   */
@@ -68,7 +73,7 @@ nav ul li a {
 .banner {
     display: flex;
     justify-content: space-between;
-    margin: 0 35px 0 230px;
+    margin: 0 35px 0 200px;
 }
 
 .bannergreetings {
@@ -78,7 +83,7 @@ nav ul li a {
 
 .bannertitle {
     font-weight: bold;
-    font-size: 85px;
+    font-size: 55px;
 }
 
 .bannerpic {

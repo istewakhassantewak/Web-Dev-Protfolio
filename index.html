@@ -18,9 +18,10 @@
         <nav>
             <h3 class="nav-title">Iste<span class="textcolor">wa</span>k</h3>
             <ul>
-                <li><a class="dark2" href="">Protfolio</a></li>
-                <li><a class="dark2" href="">Blog</a></li>
-                <li><a href="">
+                <li><a class="dark2" href="#about">About Me</a></li>
+                <li><a class="dark2" href="#skills">What I do</a></li>
+                <li><a class="dark2" href="#resume">Resume</a></li>
+                <li><a href="#contact">
                         <button class="btn-primary">Hire Me</button>
                     </a></li>
             </ul>
@@ -35,14 +36,14 @@
                     problem-solving abilities and adaptability across technical and administrative roles.
 
                 </p>
-                <button class="btn-primary"><i class="fa-solid fa-download"></i> Download CV</button>
-                <button class="btn-primary"><i class="fa-solid fa-phone"></i> Contact</button>
+                <a href="cv/Istewak CV.pdf" download class="btn-primary"><i class="fa-solid fa-download"></i> Download CV</a>
+                <button id="contactBtn" class="btn-primary"><i class="fa-solid fa-phone"></i> Contact</button>
             </div>
-            <img class="bannerpic" src="images/Istewak.png" alt="">
+            <img class="bannerpic" src="images/Istewak.png" alt="Istewak Hassan Tewak">
         </div>
     </header>
     <main>
-        <section class="about secondarybg">
+        <section class="about secondarybg" id="about">
             <h3 class="sectiontitle">
                 About Me
             </h3>
@@ -74,7 +75,7 @@
                 </div>
             </div>
         </section>
-        <section class="skills">
+        <section class="skills" id="skills">
             <h3 class="sectiontitle textcenter">What I do</h3>
             <p class="sectiondesc textcenter">
                 I design and develop responsive web applications using HTML, CSS, and JavaScript, focusing on clean UI
@@ -85,28 +86,28 @@
             </p>
             <div class="skillscontainer">
                 <div class="skill">
-                    <img src="images/icons/js.png" alt="">
+                    <img src="images/icons/js.png" alt="JavaScript icon">
                     <h4 class="skilltitle">JavaScript</h4>
                     <p class="skilldesc">Proficient in JavaScript for building dynamic and interactive web applications.
                         Experienced in DOM manipulation, event
                         handling, and working with APIs to create responsive and user-friendly interfaces.</p>
                 </div>
                 <div class="skill">
-                    <img src="images/icons/react.png" alt="">
+                    <img src="images/icons/react.png" alt="React icon">
                     <h4 class="skilltitle">React</h4>
                     <p class="skilldesc">Skilled in React for building modular, component-based user interfaces.
                         Experienced with state management, hooks, and
                         integrating APIs to develop fast, scalable, and responsive web applications.</p>
                 </div>
                 <div class="skill">
-                    <img src="images/icons/nodejs.png" alt="">
+                    <img src="images/icons/nodejs.png" alt="Node.js icon">
                     <h4 class="skilltitle">Node.js</h4>
                     <p class="skilldesc">Experienced in Node.js for building scalable backend services and RESTful APIs.
                         Skilled in handling server-side logic,
                         asynchronous operations, and database integration for efficient web applications.</p>
                 </div>
                 <div class="skill">
-                    <img src="images/icons/mongo.png" alt="">
+                    <img src="images/icons/mongo.png" alt="MongoDB icon">
                     <h4 class="skilltitle">MongoDB</h4>
                     <p class="skilldesc">Experienced in MongoDB for designing and managing NoSQL databases. Skilled in
                         schema design, CRUD operations, and
@@ -114,7 +115,7 @@
                 </div>
             </div>
         </section>
-        <section class="resume">
+        <section class="resume" id="resume">
             <h3 class="sectiontitle textcenter">A summary of My Resume</h3>
             <div class="resumecontainer">
                 <div class="resumecolumn">
@@ -177,31 +178,44 @@
                 </div>
             </div>
             <div class="textcenter resumedownloadcv">
-                <button class="btn-primary"><i class="fa-solid fa-download"></i> Download CV</button>
+                <a href="cv/Istewak CV.pdf" download class="btn-primary"><i class="fa-solid fa-download"></i> Download
+                    CV</a>
             </div>
         </section>
     </main>
-    <footer>
+    <button id="scrollToTop" class="btn-primary">↑</button>
+    <footer id="contact">
         <div class="footercolumn">
             <h3 class="sectiontitle">Let's Connect</h3>
             <p class="sectiondesc">Please fill out the form on this section to contact with me or call between 9:00
                 A.M and 8:00 P.M ET, Monday through Friday.</p>
             <div class="sociallinks">
-                <a href=""><img src="images/icons/facebook.png" alt=""></a>
-                <a href=""><img src="images/icons/twitter.png" alt=""></a>
-                <a href=""><img src="images/icons/insta.png" alt=""></a>
+                <a href="https://www.facebook.com/istewakhassantewak121" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/istewak_hassan_tewak/?__pwa=1" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/Istewak" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/istewak-hassan-tewak" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/istewakhassantewak" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-github"></i></a>
             </div>
         </div>
         <div class="footercolumn">
             <h3 class="sectiontitle">Let's Message me</h3>
             <form class="contact" action="">
-                <input type="text" placeholder="Your Name">
-                <input type="email" name="" placeholder="Your Email" id="">
-                <textarea placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Your Name">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="" placeholder="Your Email">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Message" name="" cols="30" rows="10"></textarea>
                 <input class="btn-primary" type="submit" value="Submit">
             </form>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

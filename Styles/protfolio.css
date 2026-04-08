@@ -6,6 +6,18 @@
         "wdth" 100;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    color: #181818;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    background: #fff;
+}
+
 /* shared style */
 .secondarybg {
     background-color: #fff8f3;
@@ -30,7 +42,22 @@
     padding: 18px 35px;
     border-radius: 5px;
     font-size: 20px;
+    line-height: 1.2;
     border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.btn-primary:hover {
+    background-color: #e55a00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(253, 110, 10, 0.3);
 }
 
 .sectiontitle {
@@ -88,7 +115,13 @@ nav li {
 nav a {
     text-decoration: none;
     font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
 
+nav a:hover,
+nav a.active {
+    color: #FD6E0A;
+    font-weight: 700;
 }
 
 
@@ -96,22 +129,40 @@ nav a {
 /* banner styles */
 .banner {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    gap: 40px;
     margin: 0 35px 0 200px;
 }
 
 .bannergreetings {
-    font-size: 45px;
+    font-size: 42px;
     font-weight: 600;
+    margin-bottom: 16px;
 }
 
 .bannertitle {
-    font-weight: bold;
-    font-size: 55px;
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 1.05;
+    margin-bottom: 22px;
+}
+
+.banner-description {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #5c5c5c;
+    margin-bottom: 28px;
+    max-width: 560px;
 }
 
 .bannerpic {
     width: 580px;
+    transition: transform 0.3s ease;
+}
+
+.bannerpic:hover {
+    transform: scale(1.05);
 }
 
 .banner-content {
@@ -127,6 +178,17 @@ main {
 main section {
     margin-top: 130px;
     margin-bottom: 130px;
+}
+
+.hidden-section {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.revealed {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* about styles */
@@ -156,6 +218,31 @@ main section {
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.skill img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.skilltitle {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.skilldesc {
+    font-size: 16px;
+    color: #5c5c5c;
+    line-height: 1.75;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* resume section styles */
@@ -164,7 +251,16 @@ main section {
     gap: 24px;
 }
 
+.experience {
+    padding: 24px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.experience:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.08);
+}
 
 .experiencesubtitle {
     font-size: 20px;
@@ -201,6 +297,17 @@ footer {
 
 .sociallinks a {
     margin-right: 25px;
+    transition: all 0.3s ease;
+}
+
+.sociallinks a i {
+    font-size: 40px;
+    color: #474747;
+}
+
+.sociallinks a:hover i {
+    color: #FD6E0A;
+    transform: scale(1.1);
 }
 
 .contact input[type="text"],
@@ -214,4 +321,104 @@ textarea {
     background: #fff;
     border: 0;
     width: 100%;
+    transition: border 0.3s ease;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #181818;
+    padding-bottom: 5px;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    border: 1px solid #FD6E0A;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        margin: 0 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav>ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav li {
+        margin-right: 0;
+    }
+
+    .banner {
+        flex-direction: column;
+        text-align: center;
+        margin: 0 20px;
+    }
+
+    .bannerpic {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .about {
+        padding: 50px 20px;
+    }
+
+    .aboutitems {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .skillscontainer {
+        flex-direction: column;
+    }
+
+    .resumecontainer {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 50px 20px;
+        gap: 50px;
+    }
+
+    .footercolumn {
+        width: 100%;
+    }
+
+    main section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+/* Scroll progress */
+#scrollProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background: linear-gradient(90deg, #FD6E0A, #fcb045);
+    z-index: 10000;
+    transition: width 0.2s ease;
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 1000;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 6px;
 }
